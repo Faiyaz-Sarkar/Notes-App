@@ -1,0 +1,212 @@
+/* General body styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the entire Todo app */
+.task-section {
+  background-color: #fff;
+  padding: 20px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 700px;
+  text-align: center;
+  min-height: 60vh;
+  margin: 50px 0px;
+}
+
+/* Todo app title */
+.task-section h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input for todo text */
+input#todo_input {
+  width: 70%;
+  max-height: 22px;
+  padding: 15px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  margin: 20px auto;
+  transition: border-color 0.3s ease;
+}
+
+input#todo_input:focus {
+  border-color: #0066ff;
+  outline: none;
+}
+
+/* Buttons container */
+.btns {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+/* Container for the list of todos */
+#todo_container {
+  margin-top: 32px;
+  text-align: left;
+}
+
+/* Individual todo item container */
+#singleElement {
+  text-align: left;
+  min-height: 150px;
+  overflow-y: visible;
+  max-height: auto;
+  display: flex;
+  row-gap: 20px;
+  padding: 0px 15px;
+  flex-direction: column;
+  max-width: 780px;
+  background-color: #f7f9fc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#singleElement .taskNumber {
+  color: #666;
+  font-size: 12px;
+}
+
+#singleElement #divText {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Edit and Delete buttons */
+#editDelete {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+button {
+  width: 200px;
+  padding: 15px 0px;
+  border-radius: 5px;
+  border: none;
+  background: #e74645;
+  color: white;
+  font-weight: 500;
+  font-size: 17px;
+  max-height: 50px;
+}
+#addBtn {
+  background-color: #58b368;
+  color: white;
+}
+#editBtn,
+#updateBtn {
+  background-color: #1c3b69;
+}
+#delete2Btn,
+#cancelBtn {
+  background-color: #726228;
+}
+.no-task-message {
+  line-height: 25px;
+  width: 70%;
+  color: #555555; /* Neutral grey for formal look */
+  background-color: #f0f0f0; /* Light background */
+  padding: 20px;
+  margin: 30px auto;
+  border: 1px solid #dddddd; /* Soft border to separate the message */
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif; /* Modern, formal font */
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+@keyframes redColor {
+  0% {
+    border: 1px solid rgb(214, 59, 59);
+  }
+  /* 50% {
+    border: 2px solid rgb(214, 59, 59);
+  } */
+  60% {
+    border: 1px solid 0066ff;
+  }
+}
+.newColor {
+  animation-name: redColor;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+/* Medium screens (tablets) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .task-section {
+    width: 80%;
+  }
+  button {
+    width: 30%;
+  }
+}
+
+/* Small screens (mobiles) */
+@media screen and (max-width: 767px) {
+  .task-section {
+    width: 90%;
+  }
+  input#todo_input {
+    width: 85%;
+  }
+
+  /* Adjust buttons on small screens */
+  .btns {
+    flex-direction: column;
+    width: 309.71px;
+    margin: auto;
+  }
+
+  #editDelete {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.no-task-message {
+  line-height: 25px;
+  width: 70%;
+  color: #555555; /* Neutral grey for formal look */
+  background-color: #f0f0f0; /* Light background */
+  padding: 20px;
+  margin: 30px auto;
+  border: 1px solid #dddddd; /* Soft border to separate the message */
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif; /* Modern, formal font */
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.note {
+  font-family: "Courier New", Courier, monospace;
+  text-transform: capitalize;
+  padding: 10px 0px;
+}
